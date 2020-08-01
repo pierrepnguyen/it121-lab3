@@ -21,7 +21,28 @@
       <hr>
     </div>
     <div class="row">
-      
+      <div class="col s7">
+        <form name="proj3" onsubmit="return validateForm()" action="">
+          <!-- name section -->
+          <label for="name">Full Name: </label>
+          <span id='error'></span>
+          <input type="text" placeholder="John Doe" name="name" id="name" required>
+          <!-- email section -->
+          <label for="email">Email:</label>
+          <span id='checkEmail'></span>
+          <input type="email" placeholder="example@email.com" name="email" id="email" required>
+          <!-- password section -->
+          <label for="sid">Student ID:</label>
+          <span id='checkSID'></span>
+          <input type="text" name="sid" id="sid" min="9" max="9" required>
+  
+          <button id="booton" type="submit" value="submit">Submit</button>
+        </form>
+        <p>Thank you <span id="name_edit">John Doe</span> for using our lab project. <span id="email_edit">example@email.com</span> was your email input and <span id="sid_edit">123456789</span> is your student ID.</p>
+      </div>
+      <div class="col s5">
+
+      </div>
     </div>
   </div>
   <script src="scripts.js"></script>
