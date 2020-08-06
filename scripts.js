@@ -71,3 +71,37 @@ function changeText(){
 
 // Event Listener
 document.getElementById('booton').addEventListener("click", changeText);
+document.getElementById('bold').addEventListener("click", toBold);
+document.getElementById('italicize').addEventListener("click", toItalicize);
+document.getElementById('underline').addEventListener("click", toUnderline);
+document.getElementById('reset').addEventListener("click", reset);
+
+// Node Lists
+var nodeLists = document.querySelectorAll('span');
+
+function toBold(){
+  nodeLists[4].style.fontWeight = "bold";
+  nodeLists[5].style.fontWeight = "bold";
+  nodeLists[6].style.fontWeight = "bold";
+}
+function toItalicize(){
+  nodeLists[4].style.fontStyle = "italic";
+  nodeLists[5].style.fontStyle = "italic";
+  nodeLists[6].style.fontStyle = "italic";
+}
+function toUnderline(){
+  nodeLists[4].style.textDecoration = "underline";
+  nodeLists[5].style.textDecoration = "underline";
+  nodeLists[6].style.textDecoration = "underline";
+}
+function reset(){
+  nodeLists[4].style.fontWeight = "normal";
+  nodeLists[4].style.fontStyle = "normal";
+  nodeLists[4].style.textDecoration = "none";
+  nodeLists[5].style.fontWeight = "normal";
+  nodeLists[5].style.fontStyle = "normal";
+  nodeLists[5].style.textDecoration = "none";
+  nodeLists[6].style.fontWeight = "normal";
+  nodeLists[6].style.fontStyle = "normal";
+  nodeLists[6].style.textDecoration = "none";
+}
